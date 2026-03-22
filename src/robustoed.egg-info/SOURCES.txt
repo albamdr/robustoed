@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+src/robustoed/__init__.py
+src/robustoed/criterion_d.py
+src/robustoed/fisher.py
+src/robustoed/grid.py
+src/robustoed/model_sympy.py
+src/robustoed/optim.py
+src/robustoed/regularize.py
+src/robustoed/sensitivity.py
+src/robustoed/types.py
+src/robustoed.egg-info/PKG-INFO
+src/robustoed.egg-info/SOURCES.txt
+src/robustoed.egg-info/dependency_links.txt
+src/robustoed.egg-info/requires.txt
+src/robustoed.egg-info/top_level.txt

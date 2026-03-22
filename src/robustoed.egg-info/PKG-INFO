@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: robustoed
+Version: 0.0.1
+Summary: Robust optimal design augmentation for nonlinear models (OED).
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.23
+Requires-Dist: scipy>=1.10
+Requires-Dist: sympy>=1.11
+
+# robustoed
+
+Tools for robust augmentation of locally optimal designs for nonlinear models.
+
+## Installation (development mode)
+
+To install in editable mode:
+
+pip install -e .
+
+## Status
+
+Early prototype (pre-alpha).
