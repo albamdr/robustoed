@@ -125,6 +125,4 @@ Validación mediante ejemplos:
 - Baranyi screening
 - Baranyi augmentation
 
-## Referencia
 
-Validado con el ejemplo Baranyi del paper de referencia.
