@@ -233,6 +233,7 @@ for case_name, n_per_step, alpha_mode, alpha in cases:
         theta_symbols=theta_symbols,
         theta0=theta0,
         bounds=bounds,
+        base_design=design0,
         uncertain_params=selected_params,
         grid_spec=selected_grid_spec,
         n_per_step=n_per_step,

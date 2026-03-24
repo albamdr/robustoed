@@ -293,6 +293,7 @@ def robust_augment_two_step(
     theta_symbols: Sequence[sp.Symbol],
     theta0: Dict[sp.Symbol, float],
     bounds: Bounds,
+    base_design: Optional[Design] = None,
     uncertain_params: Sequence[sp.Symbol],
     grid_spec: Optional[Dict[sp.Symbol, Tuple[float, float, int]]] = None,
     rel_range: float = 0.15,
@@ -340,13 +341,21 @@ def robust_augment_two_step(
     theta0_vec = _theta_dict_to_vector(theta_symbols, theta0)
 
     # Base design ξ0*
-    res0 = wynn_fedorov_d_opt(model=model, theta=theta0_vec, bounds=bounds, n_support=6, options=wynn_base)
-    xi0 = _merge_close_support(
-        res0.design.points,
-        res0.design.weights,
-        digits=rounding_digits,
-        merge_tol=merge_tol,
-    )
+    if base_design is None:
+        res0 = wynn_fedorov_d_opt(model=model, theta=theta0_vec, bounds=bounds, n_support=6, options=wynn_base)
+        xi0 = _merge_close_support(
+            res0.design.points,
+            res0.design.weights,
+            digits=rounding_digits,
+            merge_tol=merge_tol,
+        )
+    else:
+        xi0 = _merge_close_support(
+            base_design.points,
+            base_design.weights,
+            digits=rounding_digits,
+            merge_tol=merge_tol,
+        )
 
     xi0_for_weights = _equal_weight_same_support(xi0) if alpha_mode == "equal_weight" else xi0
     d = xi0.points.shape[1]
