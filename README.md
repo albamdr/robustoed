@@ -1,17 +1,17 @@
 # robustoed
 
-Paquete Python para Diseño Óptimo de Experimentos (OED) robusto en modelos no lineales, con implementación actual orientada a criterio D y validación sobre el ejemplo de Baranyi del paper de referencia.
+Paquete Python para Diseño Óptimo de Experimentos (OED) robusto en modelos no lineales, con implementación actual orientada a criterio D-optimización y validación sobre el ejemplo de Baranyi del paper de referencia (https://doi.org/10.1016/j.chemolab.2024.105104).
 
 ## Estado actual
 
-Versión funcional de investigación / prototipo técnico.
+Versión funcional / prototipo técnico.
 
 Actualmente incluye:
 
 - construcción de modelos simbólicos con SymPy,
-- cálculo de la matriz de información de Fisher,
-- diseño D-óptimo local mediante un algoritmo tipo Wynn–Fedorov,
-- análisis formal de sensibilidad frente a incertidumbre paramétrica,
+- cálculo de la matriz de información de Fisher (FIM),
+- diseño D-óptimo local mediante algoritmo tipo Wynn–Fedorov,
+- análisis de sensibilidad frente a incertidumbre paramétrica,
 - screening de parámetros sensibles,
 - augmentación robusta en dos pasos,
 - replicación del caso Baranyi del paper.
@@ -101,8 +101,6 @@ Screening del modelo Baranyi.
 examples/baranyi_augment.py  
 Augmentación robusta Baranyi.
 
-IMPORTANTE:
-Para 2 puntos, fixed y equal_weight deben coincidir si el diseño base es equiposado.
 
 ## Entrada
 
@@ -120,10 +118,8 @@ Para 2 puntos, fixed y equal_weight deben coincidir si el diseño base es equipo
 
 ## Limitaciones
 
-- solo criterio D
-- prototipo de investigación
+- solo criterio D-opt
 - tiempos altos en ejemplos complejos
-- sin API estable todavía
 
 ## Testing
 
