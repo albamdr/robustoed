@@ -50,12 +50,7 @@ robust-oed/
 - sympy
 - matplotlib (solo para algunos ejemplos)
 
-## Instalación
 
-python -m venv .venv
-source .venv/bin/activate
-pip install -e .
-pip install matplotlib
 
 ## Flujo de uso recomendado
 
