@@ -111,7 +111,7 @@ Augmentación robusta Baranyi.
 
 ## Salida
 
-- Design (points, weights)
+- Design (puntos de soporte, pesos)
 - informes de sensibilidad
 - resultados de screening
 - resultados de augmentación
